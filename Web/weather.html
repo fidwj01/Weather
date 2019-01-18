@@ -1,0 +1,300 @@
+<!doctype HTML>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Weather</title>
+            <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400,700" rel="stylesheet">
+            <link rel="stylesheet" type="text/css" href="weather.css">
+    </head>
+    <body onload="init()">
+        <main>
+            <div id="topInfoMobile">
+                <div id="mobileTop">
+                    <div id="topLeft">
+                        <input id="inputBoxMobile" type="text" placeholder="enter zip">
+                    </div>
+                    <div id="topRight">
+                        <input id="mobileSubmitButton" type="image" src="../WeatherApp%203/plus.png" onclick="submitNewMobile()">
+                    </div>
+                </div>
+                <div id="mobilleBottom">
+                    <span id="mobileNowTime"></span>
+                    <br>
+                    <span id="mobileLocationName"></span>
+                </div>
+            </div>
+            <div id="topInfo">
+                <div id="infoTop">
+                    <div id="todayInfo">
+                        <div id="todayTime">
+                            <span id="nowTime"></span>
+                        </div>
+                        <div id="todayDate">
+                            <span id="nowDate"></span>
+                        </div>
+                    </div>
+                    <div id="inputDiv">
+                        <input id="inputBox" type="text" placeholder="enter zip"><br>
+                        <button id="submitButton" onclick="submitNew()">submit</button>
+                    </div>
+                </div>
+                <div id="infoMiddle">
+                    <p id="locationName"></p>
+                </div>
+                <div id="infoBottom">
+                    <div class="infoBottomItem">
+                        <img id="nowIcon" src="../WeatherApp%203/sunny.png" alt="icon">
+                    </div>
+                    <div class="infoBottomItem">
+                        <div id="summary">
+                            <div id="summaryTop">
+                                <span id="nowTemp"></span>
+                                <img id="degreeSign" src="../WeatherApp%203/degree.png" alt="°">
+                                <span id="degreeUnit"></span>
+                            </div>
+                            <div id="summaryBottom">
+                                <p id="nowText"></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="infoBottomItem">
+                        <div id="extraInfo">
+                            <table>
+                                <tr>
+                                    <td class="extraIcon">
+                                        <img id="humidityIcon" src="../WeatherApp%203/drop.png" alt="humidity">
+                                    </td>
+                                    <td class="extraText">
+                                        <span id="nowHumidity"></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="extraIcon">
+                                        <img id="windIcon" src="../WeatherApp%203/wind.png" alt="wind">
+                                    </td>
+                                    <td class="extraText">
+                                        <span id="nowWind"></span>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="range">
+                <div class="stepper">
+                    <div class="forecast">
+                        <p class="forecastDay"></p>
+                        <div class="forecastPicture">
+                            <img class="forecastIcon" src="../WeatherApp%203/sunny.png" alt="icon">
+                        </div>
+                        <div class="forecastDescription">
+                            <p class="forecastText"></p>
+                        </div>
+                        <div class="forecastTemp">
+                            <div>
+                                <span class="highTemp"></span>
+                            </div>
+                            <div>
+                                <span class="lowTemp"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="stepper">
+                    <div class="forecast">
+                        <p class="forecastDay"></p>
+                        <div class="forecastPicture">
+                            <img class="forecastIcon" src="../WeatherApp%203/sunny.png" alt="icon">
+                        </div>
+                        <div class="forecastDescription">
+                            <p class="forecastText"></p>
+                        </div>
+                        <div class="forecastTemp">
+                            <div>
+                                <span class="highTemp"></span>
+                            </div>
+                            <div>
+                                <span class="lowTemp"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="stepper">
+                    <div class="forecast">
+                        <p class="forecastDay"></p>
+                        <div class="forecastPicture">
+                            <img class="forecastIcon" src="../WeatherApp%203/sunny.png" alt="icon">
+                        </div>
+                        <div class="forecastDescription">
+                            <p class="forecastText"></p>
+                        </div>
+                        <div class="forecastTemp">
+                            <div>
+                                <span class="highTemp"></span>
+                            </div>
+                            <div>
+                                <span class="lowTemp"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="stepper">
+                    <div class="forecast">
+                        <p class="forecastDay"></p>
+                        <div class="forecastPicture">
+                            <img class="forecastIcon" src="../WeatherApp%203/sunny.png" alt="icon">
+                        </div>
+                        <div class="forecastDescription">
+                            <p class="forecastText"></p>
+                        </div>
+                        <div class="forecastTemp">
+                            <div>
+                                <span class="highTemp"></span>
+                            </div>
+                            <div>
+                                <span class="lowTemp"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="stepper">
+                    <div class="forecast">
+                        <p class="forecastDay"></p>
+                        <div class="forecastPicture">
+                            <img class="forecastIcon" src="../WeatherApp%203/sunny.png" alt="icon">
+                        </div>
+                        <div class="forecastDescription">
+                            <p class="forecastText"></p>
+                        </div>
+                        <div class="forecastTemp">
+                            <div>
+                                <span class="highTemp"></span>
+                            </div>
+                            <div>
+                                <span class="lowTemp"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="stepper">
+                    <div class="forecast">
+                        <p class="forecastDay"></p>
+                        <div class="forecastPicture">
+                            <img class="forecastIcon" src="../WeatherApp%203/sunny.png" alt="icon">
+                        </div>
+                        <div class="forecastDescription">
+                            <p class="forecastText"></p>
+                        </div>
+                        <div class="forecastTemp">
+                            <div>
+                                <span class="highTemp"></span>
+                            </div>
+                            <div>
+                                <span class="lowTemp"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="stepper">
+                    <div class="forecast">
+                        <p class="forecastDay"></p>
+                        <div class="forecastPicture">
+                            <img class="forecastIcon" src="../WeatherApp%203/sunny.png" alt="icon">
+                        </div>
+                        <div class="forecastDescription">
+                            <p class="forecastText"></p>
+                        </div>
+                        <div class="forecastTemp">
+                            <div>
+                                <span class="highTemp"></span>
+                            </div>
+                            <div>
+                                <span class="lowTemp"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="stepper">
+                    <div class="forecast">
+                        <p class="forecastDay"></p>
+                        <div class="forecastPicture">
+                            <img class="forecastIcon" src="../WeatherApp%203/sunny.png" alt="icon">
+                        </div>
+                        <div class="forecastDescription">
+                            <p class="forecastText"></p>
+                        </div>
+                        <div class="forecastTemp">
+                            <div>
+                                <span class="highTemp"></span>
+                            </div>
+                            <div>
+                                <span class="lowTemp"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="stepper">
+                    <div class="forecast">
+                        <p class="forecastDay"></p>
+                        <div class="forecastPicture">
+                            <img class="forecastIcon" src="../WeatherApp%203/sunny.png" alt="icon">
+                        </div>
+                        <div class="forecastDescription">
+                            <p class="forecastText"></p>
+                        </div>
+                        <div class="forecastTemp">
+                            <div>
+                                <span class="highTemp"></span>
+                            </div>
+                            <div>
+                                <span class="lowTemp"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="stepper">
+                    <div class="forecast">
+                        <p class="forecastDay"></p>
+                        <div class="forecastPicture">
+                            <img class="forecastIcon" src="../WeatherApp%203/sunny.png" alt="icon">
+                        </div>
+                        <div class="forecastDescription">
+                            <p class="forecastText"></p>
+                        </div>
+                        <div class="forecastTemp">
+                            <div>
+                                <span class="highTemp"></span>
+                            </div>
+                            <div>
+                                <span class="lowTemp"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="arrowButtons">
+                <div id="leftButtonDiv">
+                    <button id="leftButton" type="button" onclick="leftArrow()">
+                        <span class="buttonText">previous forecasts</span>
+                    </button>
+                </div>
+                <div id="rightButtonDiv">
+                    <button id="rightButton" type="button" onclick="rightArrow()">
+                        <span class="buttonText">more forecasts</span>
+                    </button>
+                </div>
+            </div>
+            <div id="powerBy">
+                <a href="https://www.yahoo.com/">
+                <img src="https://poweredby.yahoo.com/white.png" alt="Power by Yahoo!">
+                </a>
+            </div>
+        </main>
+
+        <script src="weather.js">
+        </script>
+    </body>
+</html>

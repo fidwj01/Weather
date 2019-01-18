@@ -1,0 +1,367 @@
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+	min-height: 98vh;
+    min-width: 200px;
+    color: #FFFFFE;
+	background: linear-gradient(#369FCC, #201F4A);
+	/* flexbox */
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+}
+
+main {
+    margin: 0;
+    margin-top: 40px;
+    margin-bottom: 0;
+	/* flexbox */
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	flex-grow: 1;
+	align-self: center;
+}
+
+div#topInfo {
+    width: 70%;
+    max-width: 560px;
+    min-width: 400px;
+	display: block;
+}
+
+div#infoTop {
+    height: 30px;
+}
+
+div#todayInfo {
+    float: left;
+}
+
+span#nowTime {
+    font-size: 32px;
+    font-weight: 200;
+}
+
+div#todayDate {
+    font-size: 18px;
+}
+
+div#inputDiv {
+    margin-top: 8px;
+    float: right;
+}
+
+#inputBox {
+    padding-left: 10px;
+    line-height: 10em;
+    width: 100px;
+    height: 24px;
+    font-size: 14px;
+    border-radius: 15px;
+    background-color: #C3DCE9;
+    border: none;
+    overflow: hidden;
+}
+
+#inputBoxMobile {
+    padding-left: 10px;
+    line-height: 10em;
+    width: 100px;
+    height: 24px;
+    font-size: 14px;
+    border-radius: 15px;
+    background-color: #C3DCE9;
+    border: none;
+    overflow: hidden;
+}
+
+button#submitButton {
+    margin: 2px;
+    font-size: 9px;
+    background-color: #00AFDE;
+    border: none;
+    color: white;
+	border-radius: 6px;
+    height: 15px;
+    width: 50px;
+    float: right;
+}
+
+::-webkit-input-placeholder {
+    vertical-align: middle;
+    color: #2D2E2C;
+    font-weight: 200;
+}
+
+div#infoMiddle {
+    text-align: center;
+    height: 40px;
+}
+
+div#infoBottom {
+    margin-top: -12px;
+    height: 150px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+.infoBottomItem {
+    width: 80%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+img#nowIcon {
+    width: 90%;
+    max-width: 130px;
+    max-height: 130px;
+}
+
+div#summary {
+    height: 100%;
+    display: block;
+}
+
+div#summaryTop {
+    margin-left: 40px;
+    min-width: 132px;
+}
+
+div#summaryBottom {
+    vertical-align: top;
+    margin-top: -20px;
+}
+
+span#nowTemp {
+    font-size: 86px;
+    font-weight: 200;
+}
+
+img#degreeSign {
+    width: 16px;
+    margin-left: -2px;
+    margin-top: 24px;
+    vertical-align: top;
+}
+
+span#degreeUnit {
+    margin-left: 10px;
+    font-size: 24px;
+    display: inline-block;
+    position:relative;
+    bottom: 46px;
+}
+
+p#locationName {
+    font-size: 34px;
+}
+
+.extraIcon {
+    text-align: center;
+}
+
+.extraText {
+    text-align: left;
+    font-weight: 200;
+    font-size: 20px;
+}
+
+img#humidityIcon {
+    height: 22px;
+}
+
+img#windIcon {
+    height: 22px;
+}
+
+div#topInfoMobile {
+    display: none;
+}
+
+div#rightButtonDiv {
+    float: right;
+}
+
+#range {
+    margin-top: 20px;
+    width: 100%;
+    max-width: 740px;
+    overflow: hidden;   /* let stepper disappear off end */
+	/* flexbox */
+	display: flex;
+	flex-direction: row;
+}
+
+.stepper {
+    width: 136px;
+	height: 194px;
+    margin: 6px;
+    background-color: #49799A;
+    border-radius: 15px;
+	/* flexbox */
+	display: flex;
+    flex-grow: 0;
+    flex-shrink: 0;
+	position: relative;  /* allow offsets from where flexbox put it */
+	/* horizontal position will be controlled by Javascript */
+    transition-property: all;
+    transition-duration: 1s;
+}
+
+.forecast {
+    width: 136px;
+	height: 194px;
+	margin: 0;
+	/* flexbox */
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-self: center;
+    align-items: center;
+}
+
+.forecastDay {
+    height: 10%;
+    font-size: 22px;
+    margin-top: 0;
+}
+
+.forecastPicture {
+    max-width: 100%;
+    height: 60px;
+    text-align: center;
+}
+
+.forecastIcon {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.forecastDescription {
+    height: 46px;
+}
+
+.forecastTemp {
+    font-size: 32px;
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-around;
+    align-self: center;
+    align-items: stretch;
+}
+
+.lowTemp {
+    font-weight: 200;
+}
+
+div#arrowButtons {
+    width: 100%;
+    max-width: 740px;
+}
+
+div#leftButtonDiv {
+    float: left;
+    height: 20px;
+}
+
+div#rightButtonDiv {
+    float: right;
+}
+
+button#leftButton {
+    display: inline-block;
+    background-color: transparent;
+    border: none;
+    background-image: url(../WeatherApp%203/arrow-left.png);
+    background-repeat: no-repeat;
+    background-position: center left 0px;
+    padding-left: 36px;
+    background-size: 32px;
+    height: 32px;
+}
+
+button#rightButton {
+    display: inline-block;
+    background-color: transparent;
+    border: none;
+    background-image: url(../WeatherApp%203/arrow-right.png);
+    background-repeat: no-repeat;
+    background-position: center right 0px;
+    padding-right: 36px;
+    background-size: 32px;
+    height: 32px;
+}
+
+.buttonImage {
+    height: 30px;
+}
+
+.buttonText {
+    padding-bottom: 5px;
+    font-size: 16px;
+    color: #FFFFFE;
+}
+
+div#powerBy {
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (max-width: 740px) {
+    main {
+        margin: 0;
+        width: 96%;
+    }
+    div#topInfo {
+        display: none;
+    }
+
+    div#range {
+        width: 100%;
+        flex-direction: column;
+        align-self: center;
+    }
+    div#topInfoMobile {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    div#topLeft {
+        margin-top: 6px;
+        float: left;
+    }
+    div#topRight {
+        float: right;
+    }
+    span#mobileNowTime {
+        font-size: 32px;
+        font-weight: 200;
+    }
+    span#mobileLocationName {
+        font-size: 20px;
+    }
+    input#mobileSubmitButton {
+        height: 38px;
+    }
+    div#range {
+        margin-top: 18px;
+        width: auto;
+        flex-direction: column;
+        align-self: center;
+    }
+    div#arrowButtons {
+		display: none;
+	}
+}
